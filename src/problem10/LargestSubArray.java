@@ -4,17 +4,13 @@ public class LargestSubArray {
 
 
 
-        int findSubArray(int arr[], int n)
+        public int findSubArray(int arr[], int n)
         {
             int sum = 0;
             int maxsize = -1, startindex = 0;
             int endindex = 0;
-
-
             for (int i = 0; i < n - 1; i++) {
                 sum = (arr[i] == 0) ? -1 : 1;
-
-
                 for (int j = i + 1; j < n; j++) {
                     if (arr[j] == 0) {
                         sum += -1;
@@ -36,11 +32,8 @@ public class LargestSubArray {
             else {
                 System.out.println(startindex + " to " + endindex);
             }
-
             return maxsize;
         }
-
-        /* Driver program to test the above functions */
 
         public static void main(String[] args)
         {
